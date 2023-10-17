@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Pemrograman Website" />
+    <meta name="author" content="Angelita Salshabilla Alindra" />
+    <meta name="keyword" content="html,css" />
+    <title>practice 4</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+      }
+      label {
+        display: block;
+        margin: 10px 0;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+      }
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+      }
+      button {
+        background: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Form Pengisian Konten</h2>
+      <form id="contentForm">
+        <label for="title">Judul Konten:</label>
+        <input type="text" id="title" name="title" required />
+
+        <label for="content">Isi Konten:</label>
+        <textarea id="content" name="content" rows="6" required></textarea>
+
+        <button type="button" id="submitBtn">Submit</button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("submitBtn")
+        .addEventListener("click", function () {
+          var title = document.getElementById("title").value;
+          var content = document.getElementById("content").value;
+
+          console.log("Judul Konten: " + title);
+          console.log("Isi Konten: " + content);
+
+          document.getElementById("contentForm").reset();
+        });
+    </script>
+  </body>
+</html>
